@@ -106,18 +106,7 @@ st.title('Hola!!! Soy PILL-E 💬')
 
 video_path = "pilleanimado.mp4"
 
-# Establece la duración del video en segundos (modifícala según tu archivo)
-video_duration = 10  # Duración del video en segundos
 
-while True:
-    # Mostrar el video
-    st.video(video_path)
-
-    # Esperar el tiempo de duración antes de recargar
-    time.sleep(video_duration)
-
-    # Limpiar el contenido de Streamlit y reproducir de nuevo
-    st.experimental_rerun()
 
 
 
