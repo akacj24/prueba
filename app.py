@@ -191,42 +191,6 @@ with col1:
             else:
                 st.warning("No se recibieron datos del sensor")
 
-with col2:
-    st.subheader("Realiza tu consulta")
-    user_question =   " "  #st.text_area("Escribe tu pregunta aquí:")
-    
-    if user_question:
-        # Incorporar datos del sensor en la pregunta si están disponibles
-        if st.session_state.sensor_data:
-            enhanced_question = f"""
-            Contexto actual del sensor:
-            - Temperatura: {st.session_state.sensor_data.get('Temp', 'N/A')}°C
-            - Humedad: {st.session_state.sensor_data.get('Hum', 'N/A')}%
-            
-            Pregunta del usuario:
-            {user_question}
-            """
-        else:
-            enhanced_question = user_question
-        
-        docs = knowledge_base.similarity_search(enhanced_question)
-        llm = OpenAI(model_name="gpt-4o-mini")
-        chain = load_qa_chain(llm, chain_type="stuff")
-        
-        with st.spinner('Analizando tu pregunta...'):
-            with get_openai_callback() as cb:
-                response = chain.run(input_documents=docs, question=enhanced_question)
-                print(cb)
-            
-            st.write("Respuesta:", response)
-
-            if st.button("Escuchar"):
-              result, output_text = text_to_speech(response, 'es-es')
-              audio_file = open(f"temp/{result}.mp3", "rb")
-              audio_bytes = audio_file.read()
-              st.markdown(f"## Escucha:")
-              st.audio(audio_bytes, format="audio/mp3", start_time=0)
-
 #/////////////hola///////////#
 
 st.write("Selecciona tus síntomas de la lista a continuación y haz clic en 'Continuar' para obtener un diagnóstico.")
@@ -273,6 +237,11 @@ if st.button("Continuar"):
             st.success("Padeces de Alergia.")
         else:
             st.warning("No puedo generar un diagnóstico para tu enfermedad, lo mejor sería que fueras al médico.")
+
+
+
+    st.subheader("Pide tu medicamento")
+       st.link_button("Vamos a recoger el medicamento", "https://ctroldevoz-cvu77lovh2bkrzmojjmskv.streamlit.app/")
 
              
 #                            print("Deleted ", f)
