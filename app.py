@@ -231,7 +231,7 @@ if st.button("Continuar"):
         # Determinar el diagnóstico basado en los síntomas seleccionados
         if (es_resfriado and not es_infeccion_gastro and not es_alergia):
             st.success("Padeces de Resfriado común. Dile a Pill-E pastilla roja.")
-            audio_file = open("alergia.mp3", "rb")
+            audio_file = open("resfriado.mp3", "rb")
             st.audio(audio_file, format="audio/mp3")
             
             st.subheader("Ir a interfaz de voz")
