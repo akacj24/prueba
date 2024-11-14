@@ -18,6 +18,8 @@ from streamlit_lottie import st_lottie
 import json
 import paho.mqtt.client as mqtt
 import pytz
+import streamlit.components.v1 as components
+
 
 MQTT_BROKER = "broker.mqttdashboard.com"
 MQTT_PORT = 1883
@@ -103,15 +105,16 @@ st.title('Hola!!! Soy PILL-E 💬')
 
 
 
-gif_path = "animacion.gif.gif"  # Asegúrate de que el archivo esté en la misma carpeta o proporciona la ruta completa
+gif_path = "animacion.gif.gif"  # Cambia esto al nombre de tu archivo GIF
 
-st.markdown(
+# Cargar el GIF usando HTML en un componente personalizado
+components.html(
     f"""
     <div style="text-align: center;">
-        <img src="{gif_path}" width="350" alt="Animated GIF">
+        <img src="data:image/gif;base64,{st.file_uploader(gif_path, type=['gif']).read().encode('base64')} " width="350" alt="Animated GIF">
     </div>
     """,
-    unsafe_allow_html=True
+    height=400,
 )
 
 
