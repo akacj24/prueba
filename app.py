@@ -231,6 +231,8 @@ if st.button("Continuar"):
         # Determinar el diagnóstico basado en los síntomas seleccionados
         if (es_resfriado and not es_infeccion_gastro and not es_alergia):
             st.success("Padeces de Resfriado común.")
+            st.subheader("Pide tu medicamento")
+            st.link_button("Vamos a recoger el medicamento", "https://ctroldevoz-cvu77lovh2bkrzmojjmskv.streamlit.app/")
         elif (es_infeccion_gastro and not es_resfriado and not es_alergia):
             st.success("Padeces de Infección Gastrointestinal.")
         elif (es_alergia and not es_resfriado and not es_infeccion_gastro):
@@ -240,8 +242,8 @@ if st.button("Continuar"):
 
 
 
-        st.subheader("Pide tu medicamento")
-        st.link_button("Vamos a recoger el medicamento", "https://ctroldevoz-cvu77lovh2bkrzmojjmskv.streamlit.app/")
+        #st.subheader("Pide tu medicamento")
+        #st.link_button("Vamos a recoger el medicamento", "https://ctroldevoz-cvu77lovh2bkrzmojjmskv.streamlit.app/")
     
              
 #                            print("Deleted ", f)
