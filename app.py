@@ -89,15 +89,14 @@ except:
     pass
 
 with st.sidebar:
-    st.subheader("Que es un sistema Experto?")
+    st.subheader("Que es PILL-E?")
     st.write(
-    """Robi resolverá dudas sobre las dudas que tengas.
-       Recuerda siempre usarlo con un adulto.
+    """PILL-E es un asistente médico personal que te ayuda a sanar :)
        
     """
                 )            
 
-st.title('Hola!!! Soy Robi 💬')
+st.title('Hola!!! Soy PILL-E 💬')
 #image = Image.open('Instructor.png')
 #st.image(image)
 with open('robotS.json') as source:
