@@ -104,7 +104,10 @@ st.title('Hola!!! Soy PILL-E 💬')
 
 
 
-video_path = "pilleanimado.mp4"
+video_path = "pilleanimado.mp4"  # Cambia esto al nombre de tu archivo
+
+# Reproduce el video
+st.video(video_path, format="video/mp4")
 
 
 
