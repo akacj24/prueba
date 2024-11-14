@@ -106,15 +106,18 @@ st.title('Hola!!! Soy PILL-E 💬')
 
 video_path = "pilleanimado.mp4"
 
-st.markdown(
-    f"""
-    <video width="350" autoplay loop muted>
-        <source src="{video_path}" type="video/mp4">
-        Tu navegador no soporta videos en HTML5.
-    </video>
-    """,
-    unsafe_allow_html=True
-)
+# Establece la duración del video en segundos (modifícala según tu archivo)
+video_duration = 10  # Duración del video en segundos
+
+while True:
+    # Mostrar el video
+    st.video(video_path)
+
+    # Esperar el tiempo de duración antes de recargar
+    time.sleep(video_duration)
+
+    # Limpiar el contenido de Streamlit y reproducir de nuevo
+    st.experimental_rerun()
 
 
 
