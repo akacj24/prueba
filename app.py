@@ -99,7 +99,25 @@ with st.sidebar:
 st.title('Hola!!! Soy PILL-E 💬')
 #image = Image.open('Instructor.png')
 #st.image(image)
-st.image("animacion.gif.gif", width=350)
+
+
+
+
+gif_path = "animacion.gif.gif"  # Asegúrate de que el archivo esté en la misma carpeta o proporciona la ruta completa
+
+st.markdown(
+    f"""
+    <div style="text-align: center;">
+        <img src="{gif_path}" width="350" alt="Animated GIF">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
+
+
 
 #ke = st.text_input('Ingresa tu Clave')
 #os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
