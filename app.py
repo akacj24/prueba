@@ -233,21 +233,21 @@ if st.button("Continuar"):
             st.success("Padeces de Resfriado común. Dile a Pill-E pastilla roja.")
             audio_file = open("alergia.mp3", "rb")
             st.audio(audio_file, format="audio/mp3")
-            audio_file.close()
+            
             st.subheader("Ir a interfaz de voz")
             st.link_button("Vamos a recoger el medicamento", "https://ctroldevoz-cvu77lovh2bkrzmojjmskv.streamlit.app/")
         elif (es_infeccion_gastro and not es_resfriado and not es_alergia):
             st.success("Padeces de Infección Gastrointestinal. Dile a Pill-E pastilla morada.")
             audio_file = open("infgastro.mp3", "rb")
             st.audio(audio_file, format="audio/mp3")
-            audio_file.close()
+            
             st.subheader("Ir a interfaz de voz")
             st.link_button("Vamos a recoger el medicamento", "https://ctroldevoz-cvu77lovh2bkrzmojjmskv.streamlit.app/")
         elif (es_alergia and not es_resfriado and not es_infeccion_gastro):
             st.success("Padeces de Alergia. Dile a Pill-E pastilla azul.")
             audio_file = open("alergia.mp3", "rb")
             st.audio(audio_file, format="audio/mp3")
-            audio_file.close()
+            
             st.subheader("Ir a interfaz de voz")
             st.link_button("Vamos a recoger el medicamento", "https://ctroldevoz-cvu77lovh2bkrzmojjmskv.streamlit.app/")
         else:
