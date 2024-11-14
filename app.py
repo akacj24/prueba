@@ -99,9 +99,7 @@ with st.sidebar:
 st.title('Hola!!! Soy PILL-E 💬')
 #image = Image.open('Instructor.png')
 #st.image(image)
-with open('robotS.json') as source:
-     animation=json.load(source)
-st.lottie(animation,width =350)
+st.image("animacion.gif.gif", width=350)
 
 #ke = st.text_input('Ingresa tu Clave')
 #os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
