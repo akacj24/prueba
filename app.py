@@ -230,15 +230,15 @@ if st.button("Continuar"):
         
         # Determinar el diagnóstico basado en los síntomas seleccionados
         if (es_resfriado and not es_infeccion_gastro and not es_alergia):
-            st.success("Padeces de Resfriado común.")
+            st.success("Padeces de Resfriado común. Dile a Pill-E pastilla roja.")
             st.subheader("Ir a interfaz de voz")
             st.link_button("Vamos a recoger el medicamento", "https://ctroldevoz-cvu77lovh2bkrzmojjmskv.streamlit.app/")
         elif (es_infeccion_gastro and not es_resfriado and not es_alergia):
-            st.success("Padeces de Infección Gastrointestinal.")
+            st.success("Padeces de Infección Gastrointestinal. Dile a Pill-E pastilla morada.")
             st.subheader("Ir a interfaz de voz")
             st.link_button("Vamos a recoger el medicamento", "https://ctroldevoz-cvu77lovh2bkrzmojjmskv.streamlit.app/")
         elif (es_alergia and not es_resfriado and not es_infeccion_gastro):
-            st.success("Padeces de Alergia.")
+            st.success("Padeces de Alergia. Dile a Pill-E pastilla azul.")
             st.subheader("Ir a interfaz de voz")
             st.link_button("Vamos a recoger el medicamento", "https://ctroldevoz-cvu77lovh2bkrzmojjmskv.streamlit.app/")
         else:
