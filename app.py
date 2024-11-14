@@ -104,7 +104,17 @@ st.title('Hola!!! Soy PILL-E 💬')
 
 
 
-st.image("animacion.gif.gif", width=350)
+video_path = "pilleanimado.mp4"
+
+st.markdown(
+    f"""
+    <video width="350" autoplay loop muted>
+        <source src="{video_path}" type="video/mp4">
+        Tu navegador no soporta videos en HTML5.
+    </video>
+    """,
+    unsafe_allow_html=True
+)
 
 
 
