@@ -193,7 +193,7 @@ with col1:
 
 with col2:
     st.subheader("Realiza tu consulta")
-    user_question = st.text_area("Escribe tu pregunta aquí:")
+    user_question =   " "  #st.text_area("Escribe tu pregunta aquí:")
     
     if user_question:
         # Incorporar datos del sensor en la pregunta si están disponibles
