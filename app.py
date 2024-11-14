@@ -241,7 +241,7 @@ if st.button("Continuar"):
 
 
     st.subheader("Pide tu medicamento")
-       st.link_button("Vamos a recoger el medicamento", "https://ctroldevoz-cvu77lovh2bkrzmojjmskv.streamlit.app/")
+    st.link_button("Vamos a recoger el medicamento", "https://ctroldevoz-cvu77lovh2bkrzmojjmskv.streamlit.app/")
 
              
 #                            print("Deleted ", f)
